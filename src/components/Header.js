@@ -6,7 +6,7 @@ class Header extends Component {
 
 	state = {
 		title: ['Home', 'Portfolio', 'Blog', 'Resume', 'Contact'],
-		icon: [🏠, 💼, ✏️, 📂, 📞]
+		icon: ['🏠', '💼', '✏️', '📂', '📞']
 	}
 
 
