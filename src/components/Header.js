@@ -3,6 +3,15 @@ import { NavLink } from 'react-router-dom';
 
 
 class Header extends Component {
+
+	state = {
+		title: ['Home', 'Portfolio', 'Blog', 'Resume', 'Contact'],
+		icon: [🏠, 💼, ✏️, 📂, 📞]
+	}
+
+
+
+
   render() {
     return (
       <header>
@@ -10,6 +19,12 @@ class Header extends Component {
           <div className="logo-container">LOGO</div>
 
           <ul className="nav-container">
+
+						{/* USE JAVASCRIPT TO PROGRAMMATICALLY BUILD OUT NAV */}
+					
+
+
+
             <li className="nav-btn">
               <NavLink to="/" activeClassName="">
                 One
