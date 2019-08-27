@@ -10,7 +10,7 @@ class Header extends Component {
     menuItems: [
       {
         title: "Home",
-        url: "home",
+        url: "",
         icon: "🏠"
       },
       {

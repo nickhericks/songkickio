@@ -7,7 +7,7 @@ const NavItem = props => {
 
   return (
     <li className="nav-btn">
-      <NavLink to={`/${match.url}`} activeClassName="">
+      <NavLink to={`/${props.url}`} activeClassName="">
         <span className='nav-icon'>{props.icon}</span>
         <br />
         <span className='nav-title'>{props.title}</span>
