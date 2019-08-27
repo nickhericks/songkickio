@@ -45,8 +45,8 @@ class Header extends Component {
           <ul className="nav-container">
             {/* USE JAVASCRIPT TO PROGRAMMATICALLY BUILD OUT NAV */}
 
-            {this.state.menuItems.map(item => (
-              <NavItem title={item.title} icon={item.icon} url={item.url} />
+            {this.state.menuItems.map( (item, index) => (
+              <NavItem title={item.title} key={index} icon={item.icon} url={item.url} />
             ))}
           </ul>
         </div>
