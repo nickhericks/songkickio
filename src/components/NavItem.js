@@ -1,11 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 
 
-class NavItem extends Component {
-  render() {
-    return <div>NavItem</div>;
-  }
+const NavItem = props => {
+
+
+  return (
+    <li className="nav-btn">
+      <NavLink to={`/${match.url}`} activeClassName="">
+        <span className='nav-icon'>{props.icon}</span>
+        <br />
+        <span className='nav-title'>{props.title}</span>
+      </NavLink>
+    </li>
+  );
 }
 
 export default NavItem;

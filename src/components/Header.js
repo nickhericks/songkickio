@@ -1,16 +1,40 @@
 import React, { Component } from "react";
-import { NavLink } from 'react-router-dom';
+
+import NavItem from "./NavItem";
+
+
 
 
 class Header extends Component {
-
-	state = {
-		title: ['Home', 'Portfolio', 'Blog', 'Resume', 'Contact'],
-		icon: ['🏠', '💼', '✏️', '📂', '📞']
-	}
-
-
-
+  state = {
+    menuItems: [
+      {
+        title: "Home",
+        url: "home",
+        icon: "🏠"
+      },
+      {
+        title: "Portfolio",
+        url: "portfolio",
+        icon: "💼"
+      },
+      {
+        title: "Blog",
+        url: "blog",
+        icon: "✏️"
+      },
+      {
+        title: "Resume",
+        url: "resume",
+        icon: "📂"
+      },
+      {
+        title: "Contact",
+        url: "contact",
+        icon: "📞"
+      }
+    ]
+  };
 
   render() {
     return (
@@ -19,37 +43,11 @@ class Header extends Component {
           <div className="logo-container">LOGO</div>
 
           <ul className="nav-container">
+            {/* USE JAVASCRIPT TO PROGRAMMATICALLY BUILD OUT NAV */}
 
-						{/* USE JAVASCRIPT TO PROGRAMMATICALLY BUILD OUT NAV */}
-					
-
-
-
-            <li className="nav-btn">
-              <NavLink to="/" activeClassName="">
-                One
-              </NavLink>
-            </li>
-            <li className="nav-btn">
-              <NavLink to="/two" activeClassName="">
-                Two
-              </NavLink>
-            </li>
-            <li className="nav-btn">
-              <NavLink to="/three" activeClassName="">
-                Three
-              </NavLink>
-            </li>
-            <li className="nav-btn">
-              <NavLink to="/four" activeClassName="">
-                Four
-              </NavLink>
-            </li>
-            <li className="nav-btn">
-              <NavLink to="/five" activeClassName="">
-                Five
-              </NavLink>
-            </li>
+            {this.state.menuItems.map(item => (
+              <NavItem title={item.title} icon={item.icon} url={item.url} />
+            ))}
           </ul>
         </div>
       </header>

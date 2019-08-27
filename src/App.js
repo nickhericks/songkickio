@@ -6,11 +6,11 @@ import './App.css';
 // Import components
 import Header from './components/Header';
 
-import One from './components/One';
-import Two from './components/Two';
-import Three from './components/Three';
-import Four from './components/Four';
-import Five from './components/Five';
+import Home from './components/Home';
+import Portfolio from "./components/Portfolio";
+import Blog from "./components/Blog";
+import Resume from "./components/Resume";
+import Contact from "./components/Contact";
 
 
 
@@ -22,14 +22,13 @@ export default class App extends Component {
         <div className="App">
           <Header />
 
-					<Switch>
-						<Route exact path='/' component={One} />
-						<Route exact path='/two' component={Two} />
-						<Route exact path='/three' component={Three} />
-						<Route exact path='/four' component={Four} />
-						<Route exact path='/five' component={Five} />
-					</Switch>
-
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/two" component={Portfolio} />
+            <Route exact path="/three" component={Blog} />
+            <Route exact path="/four" component={Resume} />
+            <Route exact path="/five" component={Contact} />
+          </Switch>
         </div>
       </BrowserRouter>
     );

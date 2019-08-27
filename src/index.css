@@ -59,6 +59,11 @@ code {
   margin: 0 auto;
 }
 
+a {
+	text-decoration: none;
+}
+
+
 
 
 header {
@@ -95,6 +100,14 @@ li.nav-btn {
 	padding-left: 3rem;
 }
 
+span.nav-icon {
+	display: none;
+}
+
+span.nav-title {
+	color: black;
+}
+
 
 .page {
 	height: 1000px;
@@ -128,5 +141,19 @@ li.nav-btn {
 	.logo-container {
 		display: none;
 	}
+
+
+	span.nav-icon {
+		font-size: 2rem;
+		display: inline;
+	}
+
+	span.nav-title {
+		color: black;
+		display: none;
+	}
+
+
+
 
 }
