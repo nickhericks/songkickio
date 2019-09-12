@@ -1,6 +1,6 @@
 ## Modern mobile friendly navigation for a website.
 
-This project built with React provides a site with a mobile friendly navigation component. When viewed on a large screen device, the navigation bar is that the top of the browser window. When viewed on a smaller mobile device screen, the items will relocate to the bottom of the browser window allowing the site navigation to be more accessible for users to navigate with their thumbs. 👍
+This project built with React provides a site with a mobile friendly navigation component. When viewed on a large screen device, the navigation bar is that the top of the browser window. When viewed on a smaller mobile device screen, the items will relocate to the bottom of the browser window allowing the site navigation to be more accessible for users to navigate with their thumb. 👍
 
 --
 
