@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 class Events extends Component {
   state = {
-    artistUpcoming: [],
     userUpcoming: []
   };
 
@@ -13,14 +12,19 @@ class Events extends Component {
     )
       .then(response => response.json())
       .then(data => {
-        this.setState({ artistUpcoming: data.resultsPage.results.event });
+        this.setState({ 
+					userUpcoming: data.resultsPage.results.calendarEntry
+									
+				
+				});
       })
       .catch(error => console.log("Error fetching or parsing data", error));
 
 
+
+
+
 	}
-
-
 
   render() {
     console.log(this.state.artistUpcoming);
@@ -30,8 +34,20 @@ class Events extends Component {
       <div className="">
         <div>
           <ul>
-            {this.state.artistUpcoming.map((event, index) => (
-              <li key={index}>{event.displayName}</li>
+            {this.state.userUpcoming.map((entry, index) => (
+              <li key={index}>
+                Artist: {entry.reason.trackedArtist[0].displayName}
+                <br />
+                Event: {entry.event.displayName}
+                <br />
+                Venue: {entry.event.venue.displayName}
+                <br />
+                Venue: {entry.event.venue.displayName}
+                <br />
+                Venue: {entry.event.venue.displayName}
+                <br />
+                Venue: {entry.event.venue.displayName}
+              </li>
             ))}
           </ul>
         </div>
