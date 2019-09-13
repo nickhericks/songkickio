@@ -63,12 +63,7 @@ a {
 	text-decoration: none;
 }
 
-ul {
-  /* list-style-type: none; */
-  /* margin: 0; */
-	/* padding: 0;	 */
-	text-align: left;
-}
+
 
 
 header {
@@ -88,6 +83,10 @@ header {
 
 div.logo-container {
 	flex-basis: 20%;
+	font-size: 3rem;
+	font-family: 'Fredoka One', cursive;
+
+	color: rgb(33, 68, 83);
 }
 
 ul.nav-container {
@@ -120,6 +119,24 @@ span.nav-title {
 	height: 1000px;
 	background-color: rgb(20, 46, 73);
 }
+
+
+ul.events {
+  list-style-type: none;
+  margin: 0;
+	padding: 0;	
+	text-align: left;
+	
+}
+
+li.event-details {
+	margin: 1rem;
+	width: 40%;
+}
+
+
+
+
 
 
 

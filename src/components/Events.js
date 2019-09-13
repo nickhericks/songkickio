@@ -27,20 +27,17 @@ class Events extends Component {
 	}
 
   render() {
-    console.log(this.state.artistUpcoming);
 		console.log(this.state.userUpcoming);
 
     return (
       <div className="">
         <div>
-          <ul>
+          <ul className="events">
             {this.state.userUpcoming.map((entry, index) => (
-              <li key={index}>
+              <li key={index} className="event-details">
                 Artist: {entry.reason.trackedArtist[0].displayName}
                 <br />
-                Event: {entry.event.displayName}
-                <br />
-                URL: {entry.event.uri}
+                Event: <a href={entry.event.uri} target="_blank">{entry.event.displayName}</a>
                 <br />
                 Venue: {entry.event.venue.displayName}
                 <br />
