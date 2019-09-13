@@ -8,13 +8,6 @@ class Home extends Component {
 	}
 	
 
-	componentDidMount() {
-
-
-		
-		
-		
-	}
 	
 	getArtistUpcoming = (query) => {
 		fetch(
