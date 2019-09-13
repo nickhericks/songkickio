@@ -28,7 +28,7 @@ class Events extends Component {
 
   render() {
     console.log(this.state.artistUpcoming);
-    console.log(this.state.userUpcoming);
+		console.log(this.state.userUpcoming);
 
     return (
       <div className="">
@@ -40,13 +40,12 @@ class Events extends Component {
                 <br />
                 Event: {entry.event.displayName}
                 <br />
-                Venue: {entry.event.venue.displayName}
+                URL: {entry.event.uri}
                 <br />
                 Venue: {entry.event.venue.displayName}
                 <br />
-                Venue: {entry.event.venue.displayName}
+                Location: {entry.event.location.city}
                 <br />
-                Venue: {entry.event.venue.displayName}
               </li>
             ))}
           </ul>
