@@ -3,17 +3,37 @@ import React, { Component } from "react";
 class Home extends Component {
 
 	state = {
-		music: []
+		artistUpcoming: [],
+		userUpcoming: []
 	}
 	
 
 	componentDidMount() {
+
+
+		
+		
+		
+	}
+	
+	getArtistUpcoming = (query) => {
 		fetch(
-      "https://api.songkick.com/api/3.0/artists/395944/gigography.json?apikey=WsvDSgM98wiuOncG"
+      `https://api.songkick.com/api/3.0/artists/${query}/calendar.json?apikey=WsvDSgM98wiuOncG`
     )
       .then(response => response.json())
       .then(data => {
-        this.setState({ music: data.resultsPage.results.event });
+        this.setState({ artistUpcoming: data.resultsPage.results.event });
+      })
+      .catch(error => console.log("Error fetching or parsing data", error));
+	}
+	
+	getUserUpcoming = (query) => {
+		fetch(
+      `https://api.songkick.com/api/3.0/users/${query}/calendar.json?reason=tracked_artist&apikey=WsvDSgM98wiuOncG`
+    )
+      .then(response => response.json())
+      .then(data => {
+        this.setState({ userUpcoming: data.resultsPage.results.calendarEntry });
       })
       .catch(error => console.log("Error fetching or parsing data", error));
 	}
@@ -23,27 +43,37 @@ class Home extends Component {
 
   render() {
 
-		console.log(this.state.music);
+		console.log(this.state.artistUpcoming);
+		console.log(this.state.userUpcoming);
 
     return (
-			<div className=''>
+      <div className="">
+        <div>
+          <button onClick={() => this.getArtistUpcoming("267219")}>
+            WhoMadeWho upcoming
+          </button>
+          <ul>
+            {this.state.artistUpcoming.map((event, index) => (
+              <li key={index}>{event.displayName}</li>
+            ))}
+          </ul>
+        </div>
 
-				<button>Request gigography</button>
-
-				{this.state.music.map( (item, index) => (
-					<div>
-
-						{item.displayName}
-
-					</div>
-				))}
-
-
-
-
-				
-			</div>
-		)
+        <div>
+          <button onClick={() => this.getUserUpcoming("nhericks")}>
+            Nick upcoming
+          </button>
+        </div>
+        <ul>
+          {this.state.userUpcoming.map((entry, index) => (
+            <li key={index}>
+              Artist: {entry.reason.trackedArtist[0].displayName}<br />
+              Venue: {entry.event.venue.displayName}
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
   }
 }
 
