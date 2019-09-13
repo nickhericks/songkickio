@@ -60,7 +60,7 @@ class Home extends Component {
         </div>
 
         <div>
-          <button onClick={() => this.getUserUpcoming("nhericks")}>
+          <button onClick={() => this.getUserUpcoming('nhericks')}>
             Nick upcoming
           </button>
         </div>

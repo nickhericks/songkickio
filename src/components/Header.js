@@ -40,7 +40,7 @@ class Header extends Component {
     return (
       <header>
         <div className="header-container contain-960">
-          <div className="logo-container">LOGO</div>
+          <div className="logo-container">songkickio</div>
 
           <ul className="nav-container">
             {/* USE JAVASCRIPT TO PROGRAMMATICALLY BUILD OUT NAV */}
