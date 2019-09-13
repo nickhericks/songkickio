@@ -14,8 +14,8 @@ class Header extends Component {
         icon: "🏠"
       },
       {
-        title: "Portfolio",
-        url: "portfolio",
+        title: "Events",
+        url: "events",
         icon: "💼"
       },
       {
