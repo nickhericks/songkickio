@@ -30,7 +30,7 @@ class Events extends Component {
 		// console.log(this.state.userUpcoming);
 
     return (
-      <div className="">
+      <div className="events-page">
         <div>
 
 					<h1>Upcoming events</h1>

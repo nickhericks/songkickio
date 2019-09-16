@@ -118,6 +118,11 @@ span.nav-title {
 .page {
 	height: 1000px;
 	background-color: rgb(20, 46, 73);
+}
+
+.events-page {
+	height: 1000px;
+	/* background-color: rgb(20, 46, 73); */
 	margin: 0 auto;
 }
 
