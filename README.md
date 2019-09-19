@@ -1,6 +1,6 @@
 # Songkickio
 
-Explore possibilities of the Songkick API.
+Explore the possibilities of the Songkick API.
 
 ---
 
