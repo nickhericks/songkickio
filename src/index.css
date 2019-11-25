@@ -126,17 +126,18 @@ span.nav-title {
 	margin: 0 auto;
 }
 
-
-ul.events {
+ul {
   list-style-type: none;
   margin: 0;
 	padding: 0;	
 	text-align: left;
+}
+
+ul.events {
 	width: 80%;
 	display: flex;
 	flex-flow: row wrap;
 	border: 1px black solid;
-
 }
 
 li.event-details {

@@ -37,8 +37,8 @@ class Custom extends Component {
 
   render() {
 
-		console.log(this.state.artistUpcoming);
-		console.log(this.state.userUpcoming);
+		console.log("artistUpcoming", this.state.artistUpcoming);
+		console.log("userUpcoming", this.state.userUpcoming);
 
     return (
       <div className="">
@@ -61,9 +61,10 @@ class Custom extends Component {
         <ul>
           {this.state.userUpcoming.map((entry, index) => (
             <li key={index}>
-              Artist: {entry.reason.trackedArtist[0].displayName}
-              <br />
-              Venue: {entry.event.venue.displayName}
+              <strong>Artist:</strong>{" "}
+              {entry.reason.trackedArtist[0].displayName}{" "}
+              <strong>Venue:</strong> 
+              {entry.event.venue.displayName}
             </li>
           ))}
         </ul>
