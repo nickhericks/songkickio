@@ -4,7 +4,9 @@ class Location extends Component {
   render() {
     return (
 			<div className='page'>
-				Location
+				<h2>Select location[s]</h2> 
+				<h2>Show my artists upcoming shows at selected location[s]</h2>
+				
 			</div>
 		)
   }

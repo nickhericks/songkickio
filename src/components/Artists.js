@@ -32,16 +32,21 @@ class Events extends Component {
     return (
       <div className="events-page">
         <div>
-
-					<h1>My Artists</h1>
-
+          <h2>My artists</h2>
 
           <ul className="events">
             {this.state.userUpcoming.map((entry, index) => (
               <li key={index} className="event-details">
                 Artist: {entry.reason.trackedArtist[0].displayName}
                 <br />
-                Event: <a href={entry.event.uri} target="_blank" rel="noopener noreferrer">{entry.event.displayName}</a>
+                Event:{" "}
+                <a
+                  href={entry.event.uri}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {entry.event.displayName}
+                </a>
                 <br />
                 Venue: {entry.event.venue.displayName}
                 <br />
