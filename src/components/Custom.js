@@ -39,8 +39,10 @@ class Custom extends Component {
 	// I want to be able to access all my artists events,
 	// then view, sort and filter that information.
 	
-	// TODO: Create an allArtists list of all the artists a user follows.
-	// TODO: Use allArtists list to request all those artists events worldwide.
+	// TODO: Create user field and add to this.state
+	// TODO: If no user is entered, create list of all artists on Songkick.
+	// TODO: Create a selectedArtists list of all the artists a user follows.
+	// TODO: Use selectedArtists list to request all those artists events.
 	// TODO: Build a way to view, sort, and filter that list by date or location.
 
 
