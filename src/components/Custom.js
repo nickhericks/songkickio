@@ -4,7 +4,8 @@ class Custom extends Component {
 
 	state = {
 		artistUpcoming: [],
-		userUpcoming: []
+		userUpcoming: [],
+		userUpcomingLocations: []
 	}
 	
 
@@ -26,7 +27,8 @@ class Custom extends Component {
     )
       .then(response => response.json())
       .then(data => {
-        this.setState({ userUpcoming: data.resultsPage.results.calendarEntry });
+				this.setState({ userUpcoming: data.resultsPage.results.calendarEntry });
+				this.setState({ userUpcomingLocations: data.resultsPage.results.calendarEntry });
       })
       .catch(error => console.log("Error fetching or parsing data", error));
 	}
@@ -39,6 +41,7 @@ class Custom extends Component {
 
 		console.log("artistUpcoming", this.state.artistUpcoming);
 		console.log("userUpcoming", this.state.userUpcoming);
+		console.log("userUpcomingLocations", this.state.userUpcomingLocations);
 
     return (
       <div className="">
@@ -65,6 +68,15 @@ class Custom extends Component {
               {entry.reason.trackedArtist[0].displayName}{" "}
               <strong>Venue:</strong> 
               {entry.event.venue.displayName}
+            </li>
+          ))}
+        </ul>
+				<h2>Locations</h2>
+        <ul>
+          {this.state.userUpcoming.map((entry, index) => (
+            <li key={index}>
+              <strong>Location:</strong> 
+              {entry.event.location.city}
             </li>
           ))}
         </ul>
