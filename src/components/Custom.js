@@ -33,7 +33,15 @@ class Custom extends Component {
       .catch(error => console.log("Error fetching or parsing data", error));
 	}
 	
+	// Must create input fields and capture in this.state
+	// Then can use those in custom api queries
 	
+	// I want to be able to access all my artists events,
+	// then view, sort and filter that information.
+	
+	// Create an allArtists list of all the artists a user follows.
+	// Use that allArtists list to request all those artists events worldwide.
+	// Then build a way to view, sort, and filter that list by date or location.
 
 
 
