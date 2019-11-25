@@ -9,7 +9,7 @@ class Header extends Component {
   state = {
     menuItems: [
       {
-        title: "Home",
+        title: "Custom",
         url: "",
         icon: "🏠"
       },

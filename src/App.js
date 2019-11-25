@@ -6,11 +6,10 @@ import './App.css';
 // Import components
 import Header from './components/Header';
 
-import Home from './components/Home';
+import Custom from './components/Custom';
 import Artists from "./components/Artists";
 import Date from "./components/Date";
 import Location from "./components/Location";
-import Contact from "./components/Contact";
 
 
 
@@ -23,11 +22,10 @@ export default class App extends Component {
           <Header />
 
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={Custom} />
             <Route exact path="/artists" component={Artists} />
             <Route exact path="/date" component={Date} />
             <Route exact path="/location" component={Location} />
-            <Route exact path="/contact" component={Contact} />
           </Switch>
         </div>
       </BrowserRouter>
