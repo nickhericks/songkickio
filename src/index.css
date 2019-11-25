@@ -146,7 +146,9 @@ li.event-details {
 	border: 1px black solid;
 }
 
-
+.item-border {
+	border: 1px solid black;
+}
 
 
 

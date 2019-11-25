@@ -31,6 +31,7 @@ class Custom extends Component {
       .catch(error => console.log("Error fetching or parsing data", error));
 	}
 	
+	
 
 
 
@@ -42,8 +43,8 @@ class Custom extends Component {
     return (
       <div className="">
         <div>
-          <button onClick={() => this.getArtistUpcoming("267219")}>
-            WhoMadeWho upcoming
+          <button onClick={() => this.getArtistUpcoming("7637139")}>
+            Susto upcoming
           </button>
           <ul>
             {this.state.artistUpcoming.map((event, index) => (
@@ -53,14 +54,15 @@ class Custom extends Component {
         </div>
 
         <div>
-          <button onClick={() => this.getUserUpcoming('nhericks')}>
+          <button onClick={() => this.getUserUpcoming("nhericks")}>
             Nick upcoming
           </button>
         </div>
         <ul>
           {this.state.userUpcoming.map((entry, index) => (
             <li key={index}>
-              Artist: {entry.reason.trackedArtist[0].displayName}<br />
+              Artist: {entry.reason.trackedArtist[0].displayName}
+              <br />
               Venue: {entry.event.venue.displayName}
             </li>
           ))}
