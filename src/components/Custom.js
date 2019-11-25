@@ -39,9 +39,9 @@ class Custom extends Component {
 	// I want to be able to access all my artists events,
 	// then view, sort and filter that information.
 	
-	// Create an allArtists list of all the artists a user follows.
-	// Use that allArtists list to request all those artists events worldwide.
-	// Then build a way to view, sort, and filter that list by date or location.
+	// TODO: Create an allArtists list of all the artists a user follows.
+	// TODO: Use allArtists list to request all those artists events worldwide.
+	// TODO: Build a way to view, sort, and filter that list by date or location.
 
 
 
