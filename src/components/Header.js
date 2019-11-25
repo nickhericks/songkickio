@@ -14,24 +14,19 @@ class Header extends Component {
         icon: "🏠"
       },
       {
-        title: "Events",
-        url: "events",
+        title: "Artists",
+        url: "artists",
         icon: "💼"
       },
       {
-        title: "Blog",
-        url: "blog",
+        title: "Date",
+        url: "date",
         icon: "✏️"
       },
       {
-        title: "Resume",
-        url: "resume",
+        title: "Location",
+        url: "location",
         icon: "📂"
-      },
-      {
-        title: "Contact",
-        url: "contact",
-        icon: "📞"
       }
     ]
   };
@@ -44,7 +39,7 @@ class Header extends Component {
 
           <ul className="nav-container">
             {/* USE JAVASCRIPT TO PROGRAMMATICALLY BUILD OUT NAV */}
-
+						Search by... 
             {this.state.menuItems.map( (item, index) => (
               <NavItem title={item.title} key={index} icon={item.icon} url={item.url} />
             ))}

@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
-class Blog extends Component {
+class Date extends Component {
   render() {
     return (
 			<div className='page'>
-				Blog
+				Date
 			</div>
 		)
   }
 }
 
-export default Blog;
+export default Date;

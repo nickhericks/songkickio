@@ -33,7 +33,7 @@ class Events extends Component {
       <div className="events-page">
         <div>
 
-					<h1>Upcoming events</h1>
+					<h1>My Artists</h1>
 
 
           <ul className="events">

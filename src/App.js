@@ -7,9 +7,9 @@ import './App.css';
 import Header from './components/Header';
 
 import Home from './components/Home';
-import Events from "./components/Events";
-import Blog from "./components/Blog";
-import Resume from "./components/Resume";
+import Artists from "./components/Artists";
+import Date from "./components/Date";
+import Location from "./components/Location";
 import Contact from "./components/Contact";
 
 
@@ -24,9 +24,9 @@ export default class App extends Component {
 
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/events" component={Events} />
-            <Route exact path="/blog" component={Blog} />
-            <Route exact path="/resume" component={Resume} />
+            <Route exact path="/artists" component={Artists} />
+            <Route exact path="/date" component={Date} />
+            <Route exact path="/location" component={Location} />
             <Route exact path="/contact" component={Contact} />
           </Switch>
         </div>
