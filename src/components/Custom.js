@@ -3,6 +3,7 @@ import React, { Component } from "react";
 class Custom extends Component {
   state = {
 		trackedArtists: [],
+		trackedArtistEvents: [],
     artistUpcoming: [],
     userUpcoming: [],
     userUpcomingLocations: []
@@ -55,7 +56,9 @@ class Custom extends Component {
         this.setState({ trackedArtists: data.resultsPage.results.artist });
       })
       .catch(error => console.log("Error fetching or parsing data", error));
-  };
+	};
+	
+
 
 	componentDidMount() {
 		this.getTrackedArtists("nhericks");
@@ -64,11 +67,11 @@ class Custom extends Component {
 
 
   render() {
-    console.log("trackedArtists", this.state.trackedArtists);
     console.log("artistUpcoming", this.state.artistUpcoming);
     console.log("userUpcoming", this.state.userUpcoming);
     console.log("userUpcomingLocations", this.state.userUpcomingLocations);
-
+    console.log("trackedArtists", this.state.trackedArtists);
+    console.log("trackedArtistEvents", this.state.trackedArtistEvents);
 
 
     return (
