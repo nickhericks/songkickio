@@ -61,7 +61,7 @@ class Custom extends Component {
 	// Get all events for user's tracked artists
 	getTrackedArtistEvents = query => {
 
-		// TODO: finish writing this. It needs to loop through this.state.trackedArtists and pull out the event info that I want to collect.
+		// TODO: Need to finish writing this. It needs to loop through this.state.trackedArtists and pull out the event info that I want to collect.
 		// TODO: Note that I don't think we can avoid the limit of 50 per page so maybe solve that by noting how many totalEntries there are then looping through the request made to get the next "page" number page=${next page number} see API docs for how to access 'totalEntries' and 'page'
 
 
