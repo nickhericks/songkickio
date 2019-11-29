@@ -34,6 +34,8 @@ class Custom extends Component {
       .catch(error => console.log("Error fetching or parsing data", error));
   };
 
+	// Use CSS Grid to display the results to user in table display that can then be sorted/filtered using JS.
+
   // Must create input fields and capture in this.state
   // Then can use those in custom api queries
 
