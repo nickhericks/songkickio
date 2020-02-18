@@ -67,6 +67,18 @@ class Custom extends Component {
 		// TODO: Note that I don't think we can avoid the limit of 50 per page so maybe solve that by noting how many totalEntries there are then looping through the request made to get the next "page" number page=${next page number} see API docs for how to access 'totalEntries' and 'page'
 
 
+    this.state.trackedArtists.forEach(artist => {
+      
+      let artistID = artist.id;
+      console.log(artistID);
+
+
+
+
+    });
+
+
+
     fetch(
       `https://api.songkick.com/api/3.0/artists/{artist_id}/calendar.json?apikey=WsvDSgM98wiuOncG`
     )
@@ -75,6 +87,7 @@ class Custom extends Component {
         this.setState({ trackedArtists: data.resultsPage.results.artist });
       })
       .catch(error => console.log("Error fetching or parsing data", error));
+
 	};
 
 
@@ -88,15 +101,15 @@ class Custom extends Component {
 
   render() {
     console.log("artistUpcoming", this.state.artistUpcoming);
-    console.log("userUpcoming", this.state.userUpcoming);
-    console.log("userUpcomingLocations", this.state.userUpcomingLocations);
-    console.log("trackedArtists", this.state.trackedArtists);
+    // console.log("userUpcoming", this.state.userUpcoming);
+    // console.log("userUpcomingLocations", this.state.userUpcomingLocations);
+    console.warn("trackedArtists", this.state.trackedArtists);
     console.log("trackedArtistEvents", this.state.trackedArtistEvents);
 
 
     return (
       <div className="">
-        <div>
+        {/* <div>
           <button onClick={() => this.getArtistUpcoming("7637139")}>
             Susto upcoming
           </button>
@@ -105,9 +118,31 @@ class Custom extends Component {
               <li key={index}>{event.displayName}</li>
             ))}
           </ul>
-        </div>
+        </div> */}
+
 
         <div>
+          <button onClick={() => this.getTrackedArtistEvents("nhericks")}>
+            All artist upcoming, in every location
+          </button>
+        </div>
+        <ul>
+          {this.state.userUpcoming.map((entry, index) => (
+            <li key={index}>
+              <strong>Artist:</strong>{" "}
+              {entry.reason.trackedArtist[0].displayName}{" "}
+              <strong>Venue:</strong>
+              {entry.event.venue.displayName}
+            </li>
+          ))}
+        </ul>
+
+
+
+
+
+
+        {/* <div>
           <button onClick={() => this.getUserUpcoming("nhericks")}>
             Nick upcoming
           </button>
@@ -121,8 +156,9 @@ class Custom extends Component {
               {entry.event.venue.displayName}
             </li>
           ))}
-        </ul>
-        <h2>Locations</h2>
+        </ul> */}
+
+        {/* <h2>Locations</h2>
         <ul>
           {this.state.userUpcoming.map((entry, index) => (
             <li key={index}>
@@ -130,7 +166,7 @@ class Custom extends Component {
               {entry.event.location.city}
             </li>
           ))}
-        </ul>
+        </ul> */}
       </div>
     );
   }
